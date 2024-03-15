@@ -3,7 +3,7 @@ import { useState } from "react";
 import Blog from "../Blog/Blog";
 import PropTypes from "prop-types";
 
-const Blogs = ({ handleAddToBookmark, handleReadingTime,isButtonDisabled }) => {
+const Blogs = ({ handleAddToBookmark, handleReadingTime,isButtonDisabled,isSecondButtonDisabled }) => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     fetch("blog.json")
@@ -20,6 +20,7 @@ const Blogs = ({ handleAddToBookmark, handleReadingTime,isButtonDisabled }) => {
           handleAddToBookmark={handleAddToBookmark}
           handleReadingTime={handleReadingTime}
           isButtonDisabled={isButtonDisabled}
+          isSecondButtonDisabled={isSecondButtonDisabled}
         ></Blog>
       ))}
     </div>
@@ -29,7 +30,8 @@ const Blogs = ({ handleAddToBookmark, handleReadingTime,isButtonDisabled }) => {
 Blogs.propTypes = {
   handleAddToBookmark: PropTypes.func,
   handleReadingTime: PropTypes.func,
-//   isButtonDisabled: PropTypes.bool,
+  isButtonDisabled: PropTypes.bool,
+  isSecondButtonDisabled: PropTypes.bool,
 };
 
 export default Blogs;

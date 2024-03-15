@@ -6,17 +6,25 @@ import Header from "./components/Header/Header";
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const [isButtonDisabled, setButtonDisabled] = useState(false);
+  const [isSecondButtonDisabled, setSecondButtonDisabled] = useState(false);
   const [readTime, setReadTime] = useState(0);
 
   const handleAddToBookmark = (blog) => {
     const newBookmarks = [...bookmarks, blog];
     setButtonDisabled(true);
     setBookmarks(newBookmarks);
+    alert("Bookmark added")
   };
 
-  const handleReadingTime = (time) => {
+  const handleReadingTime = (id,time) => {
     // console.log("marking time", time);
+    setSecondButtonDisabled(true)
     setReadTime(readTime + time);
+    alert("Time Line added")
+    // remove read bookmark
+    const remainingBookmarks = bookmarks.filter(bookmark => bookmark.id !== id)
+    setBookmarks(remainingBookmarks)
+    setButtonDisabled(false)
   };
 
   return (
@@ -28,6 +36,7 @@ function App() {
           handleAddToBookmark={handleAddToBookmark}
           handleReadingTime={handleReadingTime}
           isButtonDisabled={isButtonDisabled}
+          isSecondButtonDisabled={isSecondButtonDisabled}
         ></Blogs>
         <Bookmarks readTime={readTime} bookmarks={bookmarks}></Bookmarks>
       </div>

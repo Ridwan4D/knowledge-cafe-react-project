@@ -5,9 +5,11 @@ const Blog = ({
   handleAddToBookmark,
   handleReadingTime,
   isButtonDisabled,
+  isSecondButtonDisabled,
 }) => {
   //   console.log(blog);
   const {
+    id,
     cover_img,
     title,
     author,
@@ -32,7 +34,11 @@ const Blog = ({
         </div>
         <div className="space-x-2">
           <span className="text-[#11111199]">{reading_time} min read</span>
-          <button className="cursor-pointer" onClick={() => handleAddToBookmark(blog)} disabled={isButtonDisabled}>
+          <button
+            className="cursor-pointer"
+            onClick={() => handleAddToBookmark(blog)}
+            disabled={isButtonDisabled}
+          >
             <i className="fa-regular fa-bookmark"></i>
           </button>
         </div>
@@ -46,8 +52,9 @@ const Blog = ({
         ))}
       </p>
       <button
-        onClick={() => handleReadingTime(reading_time)}
-        className="underline text-[#6047EC]"
+        onClick={() => handleReadingTime(id,reading_time)}
+        className="underline text-[#6047EC] cursor-pointer"
+        disabled={isSecondButtonDisabled}
       >
         Mark as read
       </button>
@@ -60,7 +67,8 @@ Blog.propTypes = {
   blog: PropTypes.object,
   handleAddToBookmark: PropTypes.func,
   handleReadingTime: PropTypes.func,
-  // isButtonDisabled: PropTypes.bool,
+  isButtonDisabled: PropTypes.bool,
+  isSecondButtonDisabled: PropTypes.bool,
 };
 
 export default Blog;
