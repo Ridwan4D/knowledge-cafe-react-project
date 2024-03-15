@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "cover_img": "https://i.ibb.co/k81qTg1/1.jpg",
+    "title": "The Art of Web Development",
+    "author": "John Doe",
+    "author_img": "https://i.ibb.co/n0P9B9D/boy1.jpg",
+    "tags": ["#webdevelopment", "#programming", "#javascript"],
+    "post_date": "2024-03-14",
+    "reading_time": 10
+  },
+  {
+    "id": 2,
+    "cover_img": "https://i.ibb.co/M51pdSc/2.jpg",
+    "title": "Cooking with Confidence",
+    "author": "Jane Smith",
+    "author_img": "https://i.ibb.co/fQ7645G/boy2.jpg",
+    "tags": ["#cooking", "#recipes", "#food"],
+    "post_date": "2024-03-13",
+    "reading_time": 15
+  },
+  {
+    "id": 3,
+    "cover_img": "https://i.ibb.co/dBRYJ2L/3.jpg",
+    "title": "Exploring Nature's Wonders",
+    "author": "David Brown",
+    "author_img": "https://i.ibb.co/jwSs67X/girl1.jpg",
+    "tags": ["#nature", "#travel", "#adventure"],
+    "post_date": "2024-03-12",
+    "reading_time": 20
+  },
+  {
+    "id": 4,
+    "cover_img": "https://i.ibb.co/hKPjpKV/4.jpg",
+    "title": "The Science Behind Happiness",
+    "author": "Emily Johnson",
+    "author_img": "https://i.ibb.co/V9NnsJW/girl2.jpg",
+    "tags": ["#psychology", "#wellbeing", "#mindfulness"],
+    "post_date": "2024-03-11",
+    "reading_time": 12
+  }
+]
