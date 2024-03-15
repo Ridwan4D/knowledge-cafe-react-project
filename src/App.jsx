@@ -14,6 +14,7 @@ function App() {
     setButtonDisabled(true);
     setBookmarks(newBookmarks);
     alert("Bookmark added")
+    setSecondButtonDisabled(false)
   };
 
   const handleReadingTime = (id,time) => {
